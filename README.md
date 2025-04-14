@@ -87,15 +87,6 @@ Or open directly in Google Colab (if applicable).
 
 ---
 
-## License
-
-This project is intended for educational and academic purposes only.
-
----
-
-## Acknowledgements
-
-Special thanks to the instructors and the Federated Learning course team for this challenging and insightful assignment.
 
 
 
