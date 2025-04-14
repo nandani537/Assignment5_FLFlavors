@@ -1,53 +1,101 @@
-# Federated Learning Assignment 5 – FL Flavors
+# Federated Learning Flavors - Assignment 5
 
-## 📘 Overview
+This repository contains solutions and experiments for **Assignment 5: Federated Learning Flavors (FLFlavors)**. The assignment explores different techniques in Federated Learning (FL), focusing on handling data heterogeneity through Clustered Federated Learning (CFL) and Vertical Federated Learning (VFL).
 
-This assignment explores different flavors of **Federated Learning (FL)** using various machine learning techniques and data clustering approaches. The notebook walks through FL concepts and experiments using helper functions, synthetic data, and clustering algorithms such as **KMeans**.
+---
 
-## 📂 File Structure
+## Overview
 
-- `Assignment5_FLFlavors.ipynb`: Main Jupyter notebook containing the code and explanations for this FL assignment.
-- `README.md`: This file, describing the project and how to run it.
+This project investigates several flavors of Federated Learning, analyzing how various FL strategies perform under different data distributions across clients.
 
-## 🔧 Requirements
+### Key Topics:
+- Vertical Federated Learning (VFL)
+- Clustered Federated Learning (CFL)
+- Global Temperature Variation Minimization (GTVMin)
+- K-Means clustering with different client representation strategies
 
-Make sure you have the following libraries installed:
+---
+
+## Repository Structure
+
+| File | Description |
+|------|-------------|
+| `Assignment5_FLFlavors.ipynb` | Main notebook with code, implementations, and detailed explanations. |
+
+---
+
+## Techniques Implemented
+
+### Vertical Federated Learning (VFL)
+- Data Points: Hourly weather data from FMI stations across Finland.
+- Target Variable: Average temperature across all stations in the next hour.
+- Methodology: Use zero-gradient condition to solve GTVMin in matrix form.
+
+### Clustered Federated Learning (CFL)
+- Motivation: Handling non-i.i.d (heterogeneous) client datasets.
+- Approach: Clustering clients into groups with similar distributions.
+
+### Client Representation Strategies for Clustering
+- K-Means with:
+  - Geographical Coordinates
+  - Gaussian Mixture Model (GMM) Parameters
+  - Laplacian Eigenvectors of Graph Representations
+
+---
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/your-username/FLFlavors-Assignment5.git
+cd FLFlavors-Assignment5
+```
+
+2. Install required Python packages:
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Usage
+
+Run the notebook locally:
 
 ```bash
-numpy
-pandas
-matplotlib
-scikit-learn
+jupyter notebook Assignment5_FLFlavors.ipynb
+```
 
-## 🚀 How to Run
+Or open directly in Google Colab (if applicable).
 
-Follow these steps to run the notebook:
+---
 
-1. **Clone or download the repository** containing the notebook, or make sure the file `Assignment5_FLFlavors.ipynb` is on your local machine.
+## Results & Analysis
 
-2. **Launch Jupyter Notebook or Jupyter Lab** in the directory where the notebook is located:
+- Performance comparison of different FL strategies.
+- Visualization of clustering results.
+- Analysis of heterogeneity handling in FL.
+- Theoretical question answers included.
 
-    ```bash
-    jupyter notebook
-    ```
+---
 
-    or
+## References
 
-    ```bash
-    jupyter lab
-    ```
+- *Federated Learning* by Jakub Konečný, H. Brendan McMahan, Daniel Ramage
+- FLBook — Sections 3.4 and 6.3
+- Finnish Meteorological Institute (FMI) weather data
 
-3. **Open `Assignment5_FLFlavors.ipynb`** from the Jupyter interface.
+---
 
-4. **Run all cells sequentially** by clicking:
-    - `Kernel > Restart & Run All` in the menu bar, **or**
-    - Use the keyboard shortcut: `Shift + Enter` to run each cell step-by-step.
+## License
 
-5. The notebook includes:
-   - Data generation and preprocessing  
-   - Implementation of various Federated Learning strategies  
-   - KMeans clustering to analyze client similarities  
-   - Result visualizations using `matplotlib`
+This project is intended for educational and academic purposes only.
 
-Make sure all dependencies are installed before running the notebook.
+---
+
+## Acknowledgements
+
+Special thanks to the instructors and the Federated Learning course team for this challenging and insightful assignment.
+
+
 
